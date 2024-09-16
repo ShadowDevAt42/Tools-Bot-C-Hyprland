@@ -1,0 +1,176 @@
+/* Styles généraux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Conteneur principal */
+.chat-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.message-list {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #242442;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.message-row {
+    display: flex;
+    margin-bottom: 10px;
+    width: 80%;
+    align-self: center;
+}
+
+.message-bubble {
+    border-radius: 18px;
+    padding: 10px 15px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background-color: #4b3f72;
+    align-self: flex-start;
+}
+
+.assistant-message {
+    background-color: #16213e;
+    align-self: flex-end;
+}
+
+.thinking-message {
+    background-color: #2d3748;
+    color: #a0aec0;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 10px auto;
+    width: 50%;
+}
+
+.input-area {
+    display: flex;
+    padding: 10px;
+    background-color: #242442;
+    border-radius: 20px;
+}
+
+#message-input {
+    flex-grow: 1;
+    border: none;
+    background-color: transparent;
+    color: #e0e0e0;
+    outline: none;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+#send-button {
+    background-color: #4b3f72;
+    color: #e0e0e0;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#send-button:hover {
+    background-color: #5a4a8a;
+}
+
+/* Barre de défilement personnalisée */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4b3f72;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #5a4a8a;
+}
+
+/* Styles pour les boutons de navigation */
+.nav-button {
+    background-color: #242442;
+    color: #e0e0e0;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #4b3f72;
+}
+
+/* Style pour la zone d'options */
+.options-container {
+    padding: 20px;
+    background-color: #242442;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.options-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+}
+
+/* Ajustements pour les widgets GTK spécifiques */
+GtkListBox {
+    background-color: transparent;
+}
+
+GtkScrolledWindow {
+    border: none;
+}
+
+GtkEntry {
+    background-color: #242442;
+    color: #e0e0e0;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+GtkButton {
+    background-color: #4b3f72;
+    color: #e0e0e0;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+GtkButton:hover {
+    background-color: #5a4a8a;
+}
